@@ -51,10 +51,11 @@
           <div class="dropdown-menu dropdown-menu-right">
             <?php if(isset($export)){?>
               <a class="dropdown-item" href="<?=base_url();?>export/<?=$export?>">Export csv</a>
+              <a class="dropdown-item" href="<?=base_url();?>import/<?=$export?>">Import csv</a>
             <?php } else{?>
               <a class="dropdown-item" href="" onclick="return alert('Please choose the table firstly!')">Export csv</a>
+              <a class="dropdown-item" href="" onclick="return alert('Please choose the table firstly!')">Import csv</a>
             <?php }?>
-            <button class="dropdown-item" type="button">Import csv</button>
             <!-- <button class="dropdown-item" type="button">Something else here</button> -->
           </div>
         </div>

@@ -65,7 +65,7 @@ class Project extends CI_Controller{
         $data['title']='Government Employee Lecturers';
         $data['level']='admin';
         $data['export']='pns';
-        $data['add']='addgovernmentemployeelecturers';
+        // $data['add']='addgovernmentemployeelecturers';
         $this->load->view('templates/header',$data);
         $this->load->view('project/viewlist/list_dosen_etc',$data);
         $this->load->view('templates/footer');
@@ -73,7 +73,7 @@ class Project extends CI_Controller{
     public function cpns()
     {
         $data['title']='CPNS Lecturers';
-        $data['add']='addcpnslecturers';
+        // $data['add']='addcpnslecturers';
         $data['level']='admin';
         $data['export']='cpns';
         $data['lecturers']=$this->project_model->cpns();
@@ -84,7 +84,7 @@ class Project extends CI_Controller{
     public function mku()
     {
         $data['title']='MKU Lecturers';
-        $data['add']='addmkulecturers';
+        // $data['add']='addmkulecturers';
         $data['level']='admin';
         $data['export']='mku';
         $data['lecturers']=$this->project_model->mku();
@@ -95,7 +95,7 @@ class Project extends CI_Controller{
     public function lb()
     {
         $data['title']='External Lecturers';
-        $data['add']='addexternallecturers';
+        // $data['add']='addexternallecturers';
         $data['level']='admin';
         $data['export']='lb';
         $data['lecturers']=$this->project_model->lb();

@@ -5,8 +5,8 @@
     header("Cache-Control: max-age=0"); //no cache
 
     $file = fopen('php://output','w');
-    $header = array("Team Name","Team ID"); 
-    fputcsv($file, $header);
+    // $header = array("Team Name","Team ID"); 
+    // fputcsv($file, $header);
     foreach ($result as $key=>$line){ 
         fputcsv($file,$line); 
     }

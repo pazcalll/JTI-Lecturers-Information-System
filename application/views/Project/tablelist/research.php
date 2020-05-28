@@ -1,6 +1,9 @@
 <div class="container" style="margin-top:20px">
     <div class="col-md-12">
         <h1 style="text-align: center; margin-bottom:30px;"><?=$title?></h1>
+        <?php if($this->session->flashdata('import')!=null){?>
+            <?php echo $this->session->flashdata('import');?>
+        <?php }?>
     </div>
     <table class="table table-striped table-bordered" id="list_smt">
         <thead>
