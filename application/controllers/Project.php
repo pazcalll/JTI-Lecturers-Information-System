@@ -153,6 +153,7 @@ class Project extends CI_Controller{
         $data['level']='admin';
         $data['export']='subjects';
         $data['add']='addsubjects';
+        // $data['banned']='yes';
         $data['subjects']=$this->project_model->subjects();
         $this->load->view('templates/header',$data);
         $this->load->view('project/tablelist/subjects',$data);
@@ -197,6 +198,7 @@ class Project extends CI_Controller{
         $data['add']='addresearch';
         $data['level']='admin';
         $data['export']='research';
+        $data['banned']='yes';
         $data['research']=$this->project_model->research();
         $this->load->view('templates/header',$data);
         $this->load->view('project/tablelist/research',$data);
@@ -219,6 +221,7 @@ class Project extends CI_Controller{
         $data['add']='addteam';
         $data['level']='admin';
         $data['export']='team';
+        $data['banned']='yes';
         $data['team']=$this->project_model->team();
         $this->load->view('templates/header',$data);
         $this->load->view('project/tablelist/team',$data);

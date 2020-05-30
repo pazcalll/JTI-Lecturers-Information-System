@@ -16,7 +16,7 @@
                             <label for="jabatanid">Class ID</label>  
                             <input type="text" 
                             class="form-control" 
-                            id="jabatanid" 
+                            id="jabatanid" style="pointer-events: none;"
                             value="<?= $jabatan['JABATANID']?>" 
                             name="jabatanid">
                             <!-- <h4 class="form-control"><?=$jabatan['CLASSID']?></h4> -->

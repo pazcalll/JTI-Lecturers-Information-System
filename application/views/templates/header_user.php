@@ -54,6 +54,7 @@
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
             <!-- <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a> -->
+            <a class="dropdown-item" href="<?=base_url();?>contractcontroller/index">Contracts</a>
             <a class="dropdown-item" href="<?=base_url();?>user/userdetail">User info</a>
             <a class="dropdown-item" href="<?=base_url().'login/logout';?>">Logout</a>
           </div>

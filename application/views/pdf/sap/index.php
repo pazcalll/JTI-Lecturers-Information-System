@@ -34,16 +34,26 @@
                         <!-- </div><br> -->
                         <!-- <div class=" "> --><br>
                             <label for="program">Study Program</label>
-                            <input type="text" name="program" id="program" class="form-control">
+                            <!-- <input type="text" name="program" id="program" class="form-control"> -->
+                            <select name="program" id="program" class="form-control">
+                                <option value="MI">MI</option>
+                                <option value="TI">TI</option>
+                            </select>
                         <!-- </div><br> -->
                         <!-- <div class=" "> --><br>
                             <label for="level">Level</label>
-                            <input type="text" name="level" id="level" class="form-control">
+                            <!-- <input type="text" name="level" id="level" class="form-control"> -->
+                            <select name="level" id="level" class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                         <!-- </div><br> -->
                         <!-- <div class=" "> --><br>
                             <div class="form-group">
                                 <label for="pdf">PDF input</label>
-                                <input type="file" class="form-control-file" id="pdf" name="pdf"><br>
+                                <input required type="file" class="form-control-file" id="pdf" name="pdf"><br>
                                 <div class="d-flex justify-content-md-center">
                                     <button type="submit" class="btn btn-primary" style="margin-bottom: -15px;">Submit</button>
                                 </div>

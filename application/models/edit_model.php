@@ -176,25 +176,30 @@ class edit_model extends CI_Model {
             "homebase" => $this->input->post('homebase',true),    
             "homebase_akre_d3" => $this->input->post('homebase_akre_d3',true),    
 		];
-        $this->db->where('NIP', $nip);
-		$this->db->where('NIDN', $nidn);
+        // $this->db->where('NIP', $nip);
+		// $this->db->where('NIDN', $nidn);
 		$this->db->where('KODE', $kode);
-		$this->db->where('PRODIID', $prodiid);
-		$this->db->where('AKREID', $akreid);
-		$this->db->where('TEAMID', $teamid);
-		$this->db->where('NAMA', base64_decode($nama));
-		$this->db->where('STATUSES', base64_decode($statuses));
-		$this->db->where('KUOTA_NGAJAR', $kuota_ngajar);
-		$this->db->where('JAM_NGAJAR', $jam_ngajar);
-		$this->db->where('SKS', $sks);
-		$this->db->where('DISTRIBUSI', $distribusi);
-		$this->db->where('KUOTA_GENAP_19_20', $kuota_genap_19_20);
-		$this->db->where('DISTR_GENAP_19_20', $distr_genap_19_20);
-		$this->db->where('JUMLAH_MATKUL_19_20', $jumlah_matkul_19_20);
-		$this->db->where('HOMEBASE', $homebase);
-		$this->db->where('HOMEBASE_AKRE_D3', $homebase_akre_d3);
+		// $this->db->where('PRODIID', $prodiid);
+		// $this->db->where('AKREID', $akreid);
+		// $this->db->where('TEAMID', $teamid);
+		// $this->db->where('NAMA', base64_decode($nama));
+		// $this->db->where('STATUSES', base64_decode($statuses));
+		// $this->db->where('KUOTA_NGAJAR', $kuota_ngajar);
+		// $this->db->where('JAM_NGAJAR', $jam_ngajar);
+		// $this->db->where('SKS', $sks);
+		// $this->db->where('DISTRIBUSI', $distribusi);
+		// $this->db->where('KUOTA_GENAP_19_20', $kuota_genap_19_20);
+		// $this->db->where('DISTR_GENAP_19_20', $distr_genap_19_20);
+		// $this->db->where('JUMLAH_MATKUL_19_20', $jumlah_matkul_19_20);
+		// $this->db->where('HOMEBASE', $homebase);
+		// $this->db->where('HOMEBASE_AKRE_D3', $homebase_akre_d3);
         $this->db->update('lecturers', $data);
 	}
+    public function getlecturers($kode)
+    {
+        $query = $this->db->order_by('NAMA','ASC')->where('KODE',$kode)->get('lecturers');
+        return $query->row_array();
+    }
 	public function teamdata($team_name,$teamid)
 	{
 		# code...

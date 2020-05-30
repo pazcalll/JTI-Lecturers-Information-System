@@ -53,7 +53,7 @@ class Pdf extends CI_Controller {
         {
                 // $this->load->view('upload_form', $error);
                 // $this->session->set_flashdata('uploadpdf', 'Failed to upload');
-                $data['title']='SAP Control';
+                $data['title']='RPS Control';
                 $data['dropdown']=$this->project_model->subjects();
                 $data['matkul']=$this->pdf_model->get_allsap();
                 if ($this->session->userdata('level')!="admin") {
@@ -151,9 +151,9 @@ class Pdf extends CI_Controller {
         // $this->form_validation->set_rules('kode_matkul', 'kode matkul', 'required');
         $this->form_validation->set_rules('nama_matkul', 'Subject Name', 'required');
         $this->form_validation->set_rules('program', 'Study Program', 'required');
-        $this->form_validation->set_rules('file', 'File Input', 'required');           
+        $this->form_validation->set_rules('level', 'Level', 'required');           
 
-        if ( ! $this->upload->do_upload('pdf') || $this->form_validation->run()==FALSE)
+        if ( $this->form_validation->run()==FALSE || ! $this->upload->do_upload('pdf'))
         {
                 $error = array('error' => $this->upload->display_errors());
 
@@ -187,7 +187,7 @@ class Pdf extends CI_Controller {
                     'tingkat' => $this->input->post('level'),
                     'std_program' => $this->input->post('program'),
                     'file' => $upload_data['file_name'],
-                    'upload_by' => $this->session->userdata('level')
+                    'upload_by' => $this->session->userdata('user')
                 );
                 if ($this->pdf_model->get_duplicatesap($new_kode) != null) {
                     $this->session->set_flashdata('uploadpdf', 'Error, Duplicated Entry. Please delete the previous file of the subject!');

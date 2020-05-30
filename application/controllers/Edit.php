@@ -124,26 +124,59 @@ class Edit extends CI_Controller {
             redirect('project/subjects','refresh');
         }
     }
-    public function lecturers($nip)
-    {   
-        $nidn=$this->uri->segment(4);
-        $kode=$this->uri->segment(5);
-        $prodiid=$this->uri->segment(6);
-        $akreid=$this->uri->segment(7);
-        $teamid=$this->uri->segment(8);
-        $nama=$this->uri->segment(9);
-        $statuses=$this->uri->segment(10);
-        $kuota_ngajar=$this->uri->segment(11);
-        $jam_ngajar=$this->uri->segment(12);
-        $sks=$this->uri->segment(13);
-        $distribusi=$this->uri->segment(14);
-        $kuota_genap_19_20=$this->uri->segment(15);
-        $distr_genap_19_20=$this->uri->segment(16);
-        $jumlah_matkul_19_20=$this->uri->segment(17);
-        $homebase=$this->uri->segment(18);
-        $homebase_akre_d3=$this->uri->segment(19);
+    // public function lecturers($nip)
+    // {   
+    //     $nidn=$this->uri->segment(4);
+    //     $kode=$this->uri->segment(5);
+    //     $prodiid=$this->uri->segment(6);
+    //     $akreid=$this->uri->segment(7);
+    //     $teamid=$this->uri->segment(8);
+    //     $nama=$this->uri->segment(9);
+    //     $statuses=$this->uri->segment(10);
+    //     $kuota_ngajar=$this->uri->segment(11);
+    //     $jam_ngajar=$this->uri->segment(12);
+    //     $sks=$this->uri->segment(13);
+    //     $distribusi=$this->uri->segment(14);
+    //     $kuota_genap_19_20=$this->uri->segment(15);
+    //     $distr_genap_19_20=$this->uri->segment(16);
+    //     $jumlah_matkul_19_20=$this->uri->segment(17);
+    //     $homebase=$this->uri->segment(18);
+    //     $homebase_akre_d3=$this->uri->segment(19);
+        // $data['title']='Form Edit Lecturers';
+        // $data['lecturers']=$this->edit_model->lecturersdata($nip,$nidn,$kode,$prodiid,$akreid,$teamid,$nama,$statuses,$kuota_ngajar,$jam_ngajar,$sks,$distribusi,$kuota_genap_19_20,$distr_genap_19_20,$jumlah_matkul_19_20,$homebase,$homebase_akre_d3);
+        // $this->form_validation->set_rules('nama', 'nama', 'required');
+        // $this->form_validation->set_rules('statuses', 'statuses', 'required');
+        // if ($this->form_validation->run() == FALSE) {
+        //     $this->load->view('templates/header',$data);
+        //     $this->load->view('project/tablelist/edit/lecturers',$data);
+        //     $this->load->view('templates/footer');
+        // }
+        // else{
+        //     $this->edit_model->editlecturers($nip,$nidn,$kode,$prodiid,$akreid,$teamid,$nama,$statuses,$kuota_ngajar,$jam_ngajar,$sks,$distribusi,$kuota_genap_19_20,$distr_genap_19_20,$jumlah_matkul_19_20,$homebase,$homebase_akre_d3);
+        //     // $this->session->set_flashdata('flash-data', 'Edited');
+        //     redirect('project/lecturers','refresh');
+        // }
+    // }
+    public function lecturers($kode)
+    {
         $data['title']='Form Edit Lecturers';
-        $data['lecturers']=$this->edit_model->lecturersdata($nip,$nidn,$kode,$prodiid,$akreid,$teamid,$nama,$statuses,$kuota_ngajar,$jam_ngajar,$sks,$distribusi,$kuota_genap_19_20,$distr_genap_19_20,$jumlah_matkul_19_20,$homebase,$homebase_akre_d3);
+        $data['lecturers']=$this->edit_model->getlecturers($kode);
+        $nip=$this->input->post('nip');
+        $nidn=$this->input->post('nidn');
+        $prodiid=$this->input->post('prodiid');
+        $akreid=$this->input->post('akreid');
+        $teamid=$this->input->post('teamid');
+        $nama=$this->input->post('nama');
+        $statuses=$this->input->post('statuses');
+        $kuota_ngajar=$this->input->post('kuota_ngajar');
+        $jam_ngajar=$this->input->post('jam_ngajar');
+        $sks=$this->input->post('sks');
+        $distribusi=$this->input->post('distribusi');
+        $kuota_genap_19_20=$this->input->post('kuota_genap_19_20');
+        $distr_genap_19_20=$this->input->post('distr_genap_19_20');
+        $jumlah_matkul_19_20=$this->input->post('jumlah_matkul_19_20');
+        $homebase=$this->input->post('homebase');
+        $homebase_akre_d3=$this->input->post('homebase_akre_d3');
         $this->form_validation->set_rules('nama', 'nama', 'required');
         $this->form_validation->set_rules('statuses', 'statuses', 'required');
         if ($this->form_validation->run() == FALSE) {
@@ -153,8 +186,8 @@ class Edit extends CI_Controller {
         }
         else{
             $this->edit_model->editlecturers($nip,$nidn,$kode,$prodiid,$akreid,$teamid,$nama,$statuses,$kuota_ngajar,$jam_ngajar,$sks,$distribusi,$kuota_genap_19_20,$distr_genap_19_20,$jumlah_matkul_19_20,$homebase,$homebase_akre_d3);
-            // $this->session->set_flashdata('flash-data', 'Edited');
             redirect('project/lecturers','refresh');
+            // var_dump($nip);
         }
     }
     public function team($team_name)

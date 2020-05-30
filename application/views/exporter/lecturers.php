@@ -1,6 +1,6 @@
 <?php 
-    $filename = "LecturersData.csv";
-    header("Content-Type: application/csv"); //mime type
+    $filename = "LecturersData.xls";
+    header("Content-Type: application/vnd.ms-excel"); //mime type
     header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
     header("Cache-Control: max-age=0"); //no cache
 

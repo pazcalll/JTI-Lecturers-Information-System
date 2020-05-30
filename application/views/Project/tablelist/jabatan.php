@@ -33,8 +33,8 @@
                         <td>
                             <a class="btn btn-outline-primary" 
                             href="<?= base_url();?>edit/jabatan/<?=$smt['JABATANID']?>/<?=$encode?>">Edit</a>
-                            <a class="btn btn-outline-danger" 
-                            href="<?= base_url();?>deleterow/deletejabatan/<?=$smt['JABATANID']?>/<?=$encode?>">Delete</a>
+                            <!-- <a class="btn btn-outline-danger" 
+                            href="<?= base_url();?>deleterow/deletejabatan/<?=$smt['JABATANID']?>/<?=$encode?>">Delete</a> -->
                         </td>
                         <?php }?>
                     </tr>

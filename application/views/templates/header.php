@@ -49,7 +49,10 @@
             CSV Control
           </button>
           <div class="dropdown-menu dropdown-menu-right">
-            <?php if(isset($export)){?>
+            <?php if(isset($banned)){?>
+              <a class="dropdown-item" href="<?=base_url();?>export/<?=$export?>">Export csv</a>
+              <a class="dropdown-item" href="" onclick="return alert('Import is not available for this table')">Import csv</a>
+            <?php }elseif(isset($export)){?>
               <a class="dropdown-item" href="<?=base_url();?>export/<?=$export?>">Export csv</a>
               <a class="dropdown-item" href="<?=base_url();?>import/<?=$export?>">Import csv</a>
             <?php } else{?>

@@ -58,7 +58,7 @@
                         ?>
                         <td>
                             <a class="btn btn-outline-primary" 
-                            href="<?=base_url()?>edit/lecturers/<?=$smt['NIP']?>/<?=$smt['NIDN']?>/<?=$smt['KODE']?>/<?=$smt['PRODIID']?>/<?=$smt['AKREID']?>/<?=$smt['TEAMID']?>/<?=$encode1?>/<?=$encode2?>/<?=$smt['KUOTA_NGAJAR']?>/<?=$smt['JAM_NGAJAR']?>/<?=$smt['SKS']?>/<?=$smt['DISTRIBUSI']?>/<?=$smt['KUOTA_GENAP_19_20']?>/<?=$smt['DISTR_GENAP_19_20']?>/<?=$smt['JUMLAH_MATKUL_19_20']?>/<?=$smt['HOMEBASE']?>/<?=$smt['HOMEBASE_AKRE_D3']?>">Edit</a>
+                            href="<?=base_url()?>edit/lecturers/<?=$smt['KODE']?>">Edit</a>
                             <a class="btn btn-outline-danger" 
                             href="<?=base_url()?>deleterow/deletelecturers/<?=$smt['NIP']?>/<?=$smt['NIDN']?>/<?=$smt['KODE']?>/<?=$smt['PRODIID']?>/<?=$smt['AKREID']?>/<?=$smt['TEAMID']?>/<?=$encode1?>/<?=$encode2?>/<?=$smt['KUOTA_NGAJAR']?>/<?=$smt['JAM_NGAJAR']?>/<?=$smt['SKS']?>/<?=$smt['DISTRIBUSI']?>/<?=$smt['KUOTA_GENAP_19_20']?>/<?=$smt['DISTR_GENAP_19_20']?>/<?=$smt['JUMLAH_MATKUL_19_20']?>/<?=$smt['HOMEBASE']?>/<?=$smt['HOMEBASE_AKRE_D3']?>">Delete</a>
                         </td>
