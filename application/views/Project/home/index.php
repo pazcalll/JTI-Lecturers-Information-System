@@ -4,15 +4,15 @@
     <div class="col-8 mt-4 mb-lg-5">
       <h2>List Table</h2>
       <ul>
-        <li><a href="<?=base_url();?>/project/bearer">Bearer of Jabatan</a></li>
         <li><a href="<?=base_url();?>/project/classes">Class List</a></li>
         <li><a href="<?=base_url();?>/project/dpa">DPA List</a></li>
-        <li><a href="<?=base_url();?>/project/jabatan">Jabatan</a></li>
         <li><a href="<?=base_url();?>/project/lecturers">Lecturers Data</a></li>
-        <li><a href="<?=base_url();?>/project/team">Lecturers Teams</a></li>
-        <li><a href="<?=base_url();?>/project/research">Research List</a></li>
-        <li><a href="<?=base_url();?>/project/researcher">Researcher Roles</a></li>
+        <li><a href="<?=base_url();?>/project/jabatan">Jabatan</a></li>
         <li><a href="<?=base_url();?>/project/subjects">Subject List</a></li>
+        <li><a href="<?=base_url();?>/project/research">Research List</a></li>
+        <li><a href="<?=base_url();?>/project/bearer">Bearer of Jabatan</a></li>
+        <li><a href="<?=base_url();?>/project/team">Lecturers Teams</a></li>
+        <li><a href="<?=base_url();?>/project/researcher">Researcher Roles</a></li>
         <li><a href="<?=base_url();?>/project/instructors">Subject Instructor List</a></li>
         <li><a href="<?=base_url();?>/project/stdprogram">Study Program List</a></li>
       </ul>

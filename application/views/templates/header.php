@@ -40,10 +40,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul class="float-right ml-auto mr-2 navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item active border-left border-right">
         <a class="nav-link" href="<?=base_url();?>/project">Home</a>
       </li>
-      <li class="nav-item ">
+      <li class="nav-item border-right">
+        <a class="nav-link" href="<?=base_url();?>/contractcontroller/allcontract">Contract List</a>
+      </li>
+      <li class="nav-item border-right">
         <div class="btn-group">
           <button type="button" style="color:white; margin-top:2px; opacity: 50%;" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             CSV Control
@@ -64,10 +67,10 @@
         </div>
         
       </li>
-      <li class="nav-item">
+      <li class="nav-item border-right">
         <a class="nav-link" href="<?=base_url()?>/login/logout">Logout</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item border-right">
         <?php
           if (isset($add) && $add=="addstudyprogramlist") {
             # code...?>
