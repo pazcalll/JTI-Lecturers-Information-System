@@ -15,7 +15,7 @@
                             <input type="hidden" name="classid" value="<?= $dpa['CLASSID']?>">
                             <label for="classid">Class ID</label>  
                             <input type="text" 
-                            class="form-control" 
+                            class="form-control" style="pointer-events: none;" 
                             id="classid" 
                             value="<?= $dpa['CLASSID']?>" 
                             name="classid">
@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="kode" value="<?= $dpa['KODE']?>">
-                            <label for="kode">Class Name</label>  
+                            <label for="kode">KODE</label>  
                             <input type="text" 
                             id="kode" 
                             class="form-control" 
@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="year" value="<?= $dpa['YEAR']?>">
-                            <label for="year">Study Program</label>  
+                            <label for="year">Year</label>  
                             <input type="text" 
                             id="year" 
                             class="form-control" 

@@ -46,7 +46,8 @@ class Import extends CI_Controller {
                             'RSID' => $data[2],
                             'TINGKAT' => $data[3]
                         );
-                        $this->db->replace('researcher',$stuff);
+                        $this->db->delete('researcher',$stuff);
+                        $this->db->insert('researcher',$stuff);
                     }
                 }
             }
